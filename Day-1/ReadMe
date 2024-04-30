@@ -1,0 +1,22 @@
+In this modeule we have covered Variables, constants, strings, and numbers.
+
+SUMMARY
+  
+Variable
+Whose value can be changed after declaration.
+Syntax -> var greeting = "Hello World"
+var keyword to create a new variable, followed by variable name, then assigning then String/Value to the variable. 
+We only need var to create a new variable, not change or access the variable.
+
+Constant
+Whose Value cannot be changed after declaration.
+Syntax -> let variable_name = "Hello World"
+let keyword to create a constant. Rest the same as variable. 
+
+Data Types
+String → Characters
+Int → Whole Numbers
+Double → Decimal numbers
+Boolean → Stores Truth and False
+
+We cannot perform operations between different data types. When a variable is created, we swift assigns a datatype to it. Later when we change the value, we cannot directly assign value of different data type. 
