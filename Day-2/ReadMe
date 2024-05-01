@@ -1,0 +1,7 @@
+In this modeule we have covered Booleans and string interpolation
+
+SUMMARY
+
+Booleans - Their values can change from true to false. ! and .toggle() functions can be used to revert the values. 
+
+We can join two different strings together by using “+”.  But we cannot concatenate diff data types with “+”.
