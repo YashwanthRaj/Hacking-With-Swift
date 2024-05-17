@@ -29,7 +29,7 @@ The append will insert elements at the end, but since there is no order in sets,
 Ideal for searching elements.
 - When we sort an array, we will get back an array that is sorted.
 
-#enum
+# enum
 
 This is short for enumerations that we can create and use in our code. They let us define a new data type with a handful of specific values 
 that it can have. Similar to sets, swift stores enum’s values in a highly optimized manner, hence searching is very easy and efficient in enum.
