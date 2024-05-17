@@ -1,4 +1,4 @@
-** Array **
+**'Array'**
 
 This data type stores multiple values into same variable. Arrays are their own data type just like **`String`**, **`Int`**, and **`Double`**, but rather than hold just one string they can hold zero strings, one string, two strings, three, fifty, fifty million, or even more strings – they can automatically adapt to hold as many as you need, and always hold data in the order you add it.
 
