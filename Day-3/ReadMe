@@ -1,6 +1,8 @@
-**'Array'**
+# Array
 
-This data type stores multiple values into same variable. Arrays are their own data type just like **`String`**, **`Int`**, and **`Double`**, but rather than hold just one string they can hold zero strings, one string, two strings, three, fifty, fifty million, or even more strings – they can automatically adapt to hold as many as you need, and always hold data in the order you add it.
+This data type stores multiple values into same variable. Arrays are their own data type just like **`String`**, **`Int`**, and **`Double`**, 
+but rather than hold just one string they can hold zero strings, one string, two strings, three, fifty, fifty million, or even more strings – they 
+can automatically adapt to hold as many as you need, and always hold data in the order you add it.
 
 - The square brackets start and end the array with commas in between each item.
 - To access the items of the array, we access the index the item in the array.
@@ -8,21 +10,26 @@ This data type stores multiple values into same variable. Arrays are their own d
 
 Type safety - Where it does not allow different types of data. 
 
-**Dictionaries**
+# Dictionaries
 
-Dictionaries don’t store items according to their position like arrays do, but instead let *us* decide where items should be stored. They are stored in key value pairs. We can access the elements using the keys. They dont allow duplicate keys to exist. But we can overwrite the values in the keys.
+Dictionaries don’t store items according to their position like arrays do, but instead let *us* decide where items should be stored. 
+They are stored in key value pairs. We can access the elements using the keys. They dont allow duplicate keys to exist. 
+But we can overwrite the values in the keys.
 
 - They are declare as [ key1:value1, key2:value2 ] . The : separates the key and value. The , separates the pairs.
 
-**Sets**
+# Sets
 
-They are very similar to arrays, but the difference is that they do not remember the order and do not allow duplicates. The append will insert elements at the end, but since there is no order in sets, we cannot  use append in sets. So we use insert them. 
+They are very similar to arrays, but the difference is that they do not remember the order and do not allow duplicates. 
+The append will insert elements at the end, but since there is no order in sets, we cannot  use append in sets. So we use insert them. 
 
 - Declaration → var abcd = Set([ a, b, c, d]).  An array is declared inside set.
 - These are used in places where we need values to be unique.
-- The sets do not store information in order, but they store data in a highly optimized manner making it fast for lookups. Ideal for searching elements.
+- The sets do not store information in order, but they store data in a highly optimized manner making it fast for lookups. 
+Ideal for searching elements.
 - When we sort an array, we will get back an array that is sorted.
 
-**enum**
+#enum
 
-This is short for enumerations that we can create and use in our code. They let us define a new data type with a handful of specific values that it can have. Similar to sets, swift stores enum’s values in a highly optimized manner, hence searching is very easy and efficient in enum.
+This is short for enumerations that we can create and use in our code. They let us define a new data type with a handful of specific values 
+that it can have. Similar to sets, swift stores enum’s values in a highly optimized manner, hence searching is very easy and efficient in enum.
