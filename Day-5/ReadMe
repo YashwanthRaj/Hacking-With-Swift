@@ -1,0 +1,34 @@
+Conditions
+
+## **If Condition**
+
+This condition will run the code inside if the condition is true.
+
+Syntax for if condition:
+
+```swift
+if someCondition {
+    print("Do something")
+}
+```
+
+In the conditions, the >,<,<=,>= are all comparison operators. The =,!= are all equality operators.
+
+The && and || are used to check if there are 2 conditions to check. The && is AND, || is OR.
+
+# Switch Case
+
+We use switch case when we know all the possible solutions to the conditions. Similar use cases to enum. The switch cases are exhaustive, meaning there should be a case for all possible values. 
+
+We can add a default case where if all the other cases are not able to run, then the default case will run. The default case should be placed at the very end. Because nothing after default is checked.
+
+fallthrough will also run the case that comes after the correct condition case.
+
+# Ternary operators
+
+Ternary operators work with *three* pieces of input, and in fact because the ternary conditional operator is the only ternary operator in Swift, you’ll often hear it called just “the ternary operator.”
+
+Ternary operators have three parts. 1 - a condition to check. 2- something to return when the condition is true. 3 - something to return when the condition is false. 
+
+
+W - What is the condition        T - What to do if the condition is true, F - What to do if the condition is false
