@@ -1,0 +1,15 @@
+Functions are the pieces of code that we can reuse. We declare a function and give it a name. Then we call it using function call. This will run all the content inside a function. 
+
+While declaration of a function, we can pass in values inside them. The values that we mention in function are called parameters and what we pass in function call are called arguments. 
+
+We use return keyword when we want to make a function return a value. 
+
+If the function has only one line of code, then we can remove the return keyword, as the line must return a value.
+
+Even if our function doesn’t return a value, you can still use **`return`** by itself to force the function to exit early. For example, we have to check if the input matches what you expected, and if it doesn’t us want to exit the function immediately before continuing.
+
+If we want to return multiple values, then we can use tuple as return type.
+
+We can customize the label for parameters. We have two names for parameters [i.e one as actual parameter and one for argument name], one that is used inside the function and one that is used outside the function for used during function call while specifying the arguments. 
+
+In swift language, _ i.e underscore is like swifts way of saying ignore the name or string or whatever it is used in place of. To remove the external parameter name we will include _ in the parameter specified during the function declaration.
