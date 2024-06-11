@@ -1,0 +1,13 @@
+With the help of struct, we can create our own data type. Struct with variables declare inside them are called properties of struct and functions are called methods of the struct. When we create a variable from struct, we call them instances. 
+
+All the struct name starts with capital letter. Thats the reason all the datatypes name start with capital letters. All the contents inside the struct will start with lower letters with camel casing to differentiate the words. 
+
+Inside a struct, the variables that are declared, they are immutable by default. So if we want to write a function that will make changes to the variables that are declared inside a struct, we will have to add a keyword called mutate before the function declaration. 
+
+While declaring a variable to use Struct with mutating function, we need to use var keyword only, not let.
+
+Getter and setter are used when we want a same property to behave differently, get will just call and display information and set will run if we provide a new value and are required to assign a value to a variable.
+
+We use didSet property that will run whenever the value of the variable changes. willSet will run when the value is about to change. 
+
+We can create a custom initializer. Just remember the golden rule: all properties must have a value by the time the initializer ends. If we had *not* provided a value for number inside the initializer, Swift would refuse to build our code.
