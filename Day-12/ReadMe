@@ -1,0 +1,61 @@
+# Classes, inheritance
+
+Swift uses structs for storing most of its data types, including String, Int, Double, and Array, but there is *another* way to create custom data types called *classes*. These have many things in common with structs, but are different in key places.
+
+First, the things that classes and structs have in common include:
+
+- You get to create and name them.
+- You can add properties and methods, including property observers and access control.
+- You can create custom initializers to configure new instances however you want.
+
+However, classes differ from structs in five key places:
+
+1. You can make one class build upon functionality in another class, gaining all its properties and methods as a starting point. If you want to selectively override some methods, you can do that too.
+2. Because of that first point, Swift won’t automatically generate a memberwise initializer for classes. This means you either need to write your own initializer, or assign default values to all your properties.
+3. When you copy an instance of a class, both copies share the same data – if you change one copy, the other one also changes.
+4. When the final copy of a class instance is destroyed, Swift can optionally run a special function called a *deinitializer*.
+5. Even if you make a class constant, you can still change its properties as long as they are variables.
+
+## Inheritance
+
+Swift lets us create classes by basing them on existing classes, which is a process known as *inheritance*. When one class inherits functionality from another class (its “parent” or “super” class), Swift will give the new class access (the “child class” or “subclass”) to the properties and methods from that parent class, allowing us to make small additions or changes to customize the way the new class behaves.
+
+If from a child class, we wish to change the method from the parent class, then we need to use a special keyword called override. And if we know for certain that we will not need any more children class, then we can mention it with a keyword final. 
+
+If a child class has any custom initializers, it must always call the *parent’s* initializer after it has finished setting up its own properties, if it has any.
+
+In Swift, all copies of a class instance share the same data, meaning that any changes you make to one copy will automatically change the other copies.
+
+Swift’s classes can optionally be given a *deinitializer*, which is a bit like the opposite of an initializer in that it gets called when the object is *destroyed* rather than when it’s *created*.
+
+This comes with a few small provisos:
+
+1. Just like initializers, you don’t use func with deinitializers – they are special.
+2. Deinitializers can never take parameters or return data, and as a result aren’t even written with parentheses.
+3. Your deinitializer will automatically be called when the final copy of a class instance is destroyed. That might mean it was created inside a function that is now finishing, for example.
+4. We never call deinitializers directly; they are handled automatically by the system.
+5. Structs don’t have deinitializers, because you can’t copy them.
+
+Exactly *when* your deinitializers are called depends on what you’re doing, but really it comes down to a concept called *scope*. Scope more or less means “the context where information is available”, and you’ve seen lots of examples already:
+
+1. If you create a variable inside a function, you can’t access it from outside the function.
+2. If you create a variable inside an if condition, that variable is not available outside the condition.
+3. If you create a variable inside a f**or** loop, including the loop variable itself, you can’t use it outside the loop.
+
+The final variation is having a variable instance and constant properties, which would mean we can create a new User if we want, but once it’s done we can’t change its properties.
+
+So, we end up with four options:
+
+1. Constant instance, constant property – a signpost that always points to the same user, who always has the same name.
+2. Constant instance, variable property – a signpost that always points to the same user, but their name can change.
+3. Variable instance, constant property – a signpost that can point to different users, but their names never change.
+4. Variable instance, variable property – a signpost that can point to different users, and those users can also change their names.
+
+Classes Recap
+
+- Classes have lots of things in common with structs, including the ability to have properties and methods, but there are five key differences between classes and structs.
+- First, classes can inherit from other classes, which means they get access to the properties and methods of their parent class. You can optionally override methods in child classes if you want, or mark a class as being final to stop others subclassing it.
+- Second, Swift doesn’t generate a memberwise initializer for classes, so you need to do it yourself. If a subclass has its own initializer, it must always call the parent class’s initializer at some point.
+- Third, if you create a class instance then take copies of it, all those copies point back to the same instance. This means changing some data in one of the copies changes them all.
+- Fourth, classes can have deinitializers that run when the last copy of one instance is destroyed.
+- Finally, variable properties inside class instances can be changed regardless of whether the instance itself was created as variable.
