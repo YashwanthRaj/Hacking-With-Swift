@@ -1,0 +1,15 @@
+Protocols let us define what kinds of functionality we expect a data type to support, and Swift ensures that the rest of our code follows those rules. They let us define a series of properties and methods that we want to use. They don’t *implement* those properties and methods – they don’t actually put any code behind it – they just say that the properties and methods must exist, a bit like a blueprint.
+
+The protocol doesn’t specify the full range of functionality that must exist, only a bare minimum. This means when you create new types that conform to the protocol you can add all sorts of other properties and methods as needed.
+
+When SwiftUI asks for our layout, that description – the whole thing – becomes the return type for the layout. We need to be explicit about every single thing we want to show on the screen, including positions, colors, font sizes, and more. 
+
+This is where opaque return types come to the rescue: we can return the type some view, which means that some kind of view screen will be returned but we don’t want to have to write out its mile-long type. At the same time, Swift knows the real underlying type because that’s how opaque return types work: Swift always knows the exact type of data being sent back, and SwiftUI will use that to create its layouts.
+
+So, when we see some view in your SwiftUI code, it’s effectively us telling Swift “this is going to send back some kind of view to lay out, but I don’t want to write out the exact thing – you figure it out for yourself.”
+
+Extensions let us add functionality to any type, whether we created it or someone else created it – even one of Apple’s own types.
+
+Notice how the method has slightly different naming now: when we return a new value we used trimmed(), but when we modified the string directly we used trim(). This is intentional, and is part of Swift’s design guidelines: if you’re returning a new value rather than changing it in place, you should use word endings like ed or ing, like reversed().
+
+**Tip:** Previously I introduced you to the sorted() method on arrays. Now you know this rule, you should realize that if you create a variable array you can use sort() on it to sort the array in place rather than returning a new copy.
