@@ -695,3 +695,16 @@ print("Next in line: \(chosen ?? "No one")")
 ```
 
 **Optional try?**
+'''swift
+enum UserError: Error {
+case badID, networkFailed
+}
+
+func getUser(id: Int)throws -> String {
+throw UserError.networkFailed
+}
+
+iflet user =try? getUser(id: 23) {
+    print("User: \(user)")
+}
+'''
