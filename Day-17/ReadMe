@@ -1,1 +1,3 @@
 This application will take in the bill amount, number of people, and the tip percentage. Then will return the amount per person. Here we have used all the tools and softwared that we have learnt so far.
+
+In this project you learn about the basic structure of SwiftUI apps, how to build forms and sections, creating navigation stacks and navigation bar titles, how to store program state with the @State and @FocusState property wrappers, how to create user interface controls like TextField and Picker, and how to create views in a loop using ForEach. Even better, you have a real project to show off for your efforts.
