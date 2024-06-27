@@ -1,0 +1,15 @@
+When we return some View for our body, SwiftUI expects to receive back some kind of view that can be displayed on the screen. That might be a navigation view, a form, a text view, a picker, or something else entirely, but it must conform to the View protocol so that it can be drawn on the screen.
+
+If we want to return *multiple* things neatly arranged then we have various options, but three are particularly useful. They are HStack , VStack, and ZStack, which handle horizontal, vertical, and, er, zepth.
+
+Getting things inside stack will help us have a better control over the elements. Leading and trailing edges for left and right in case of alignment. These stacks are designed to fill the entire space and center them. Spacer is used to place the content inside a stack. It will take all the remaining space and push the content to help us place other elements. 
+
+SwiftUI gives us four kinds of gradients to work with, and like colors most of them are also views that can be drawn in our UI.
+
+Gradients are made up of several components:
+
+- An array of colors to show
+- Size and direction information
+- The type of gradient to use
+
+All buttons inside the alert will dismiss the alert.
