@@ -1,0 +1,13 @@
+We use struct for our views and not class. Reasons :
+
+First, there is an element of performance: structs are simpler and faster than classes. I say *an element* of performance because lots of people think this is the primary reason SwiftUI uses structs, when really it’s just one part of the bigger picture.
+
+In UIKit, every view descended from a class called UIView that had many properties and methods – a background color, constraints that determined how it was positioned, a layer for rendering its contents into, and more. There were *lots* of these, and every UIView and UIView subclass had to have them, because that’s how inheritance works.
+
+In SwiftUI, all our views are trivial structs and are almost free to create. Think about it: if you make a struct that holds a single integer, the entire size of your struct is… that one integer. Nothing else. No surprise extra values inherited from parent classes, or grandparent classes, or great-grandparent classes, etc – they contain exactly what you can see and nothing more.
+
+The order of properties and modifier matters in swift. Because thats the order that the modifiers will be applied. The main reason we use @State property is because it will re-invoke the body property every time the value changes. 
+
+Environment Modifier will apply changes to all the elements inside the stack. But anything inside the stack will override the environment modifier. In swift UI, we can split complex views into smaller simple views. 
+
+We can also have custom modifiers which we can build with with viewmodifier protocol. Then we can create extensions on the view protocol to make it easier inside the body.
