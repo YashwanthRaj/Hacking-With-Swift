@@ -1,0 +1,3 @@
+In the same way that SwiftUI makes user interface development easy, Core ML makes machine learning easy. How easy? Well, once you have a trained model you can get predictions in just two lines of code – you just need to send in the values that should be used as input, then read what comes back.
+
+In our case, we already made a Core ML model using Xcode’s Create ML app, so we’re going to use that. You should have saved it on your desktop, so please now drag it into the project navigator in Xcode. When Xcode prompts you to “Copy items if needed”, please make sure that box is checked.
